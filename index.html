@@ -168,6 +168,24 @@
     transition: background 0.2s;
   }
   .form-wrap button:hover { background: #B05E3A; }
+  .btn-waitlist {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background 0.2s;
+    margin-bottom: 12px;
+  }
+  .btn-waitlist:hover { background: #B05E3A; }
   .form-note {
     font-size: 12px;
     color: var(--light);
@@ -281,12 +299,7 @@
       <h2>Sois parmi les premières à le recevoir <em>au prix de lancement.</em></h2>
       <p>Le guide sort dans quelques semaines. Inscris-toi pour être prévenue le jour J et profiter du tarif réservé aux premières inscrites.</p>
 
-      <!-- REMPLACE CE BLOC PAR TON FORMULAIRE SYSTEME.IO -->
-      <div class="form-wrap">
-        <input type="text" placeholder="Ton prénom" />
-        <input type="email" placeholder="Ton adresse email" />
-        <button type="button">Je veux être prévenue →</button>
-      </div>
+      <a href="https://inesricharte.systeme.io/d763eb33" class="btn-waitlist">Je veux être prévenue →</a>
       <p class="form-note">Pas de spam. Tu peux te désinscrire à tout moment.</p>
     </div>
   </div>
