@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les Règles de Déco – Liste d'attente</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FAF7F2;
+    --white: #FFFFFF;
+    --charcoal: #1C1C1A;
+    --mid: #4A4A46;
+    --light: #8A8A84;
+    --accent: #C4704A;
+    --blue: #8bafd7;
+    --section-bg: #F2EDE6;
+    --border: #E0D9CF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  nav {
+    padding: 18px 40px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    background: var(--white);
+  }
+  nav img {
+    height: 52px;
+    width: auto;
+  }
+
+  .blue-strip { height: 3px; background: var(--blue); opacity: 0.5; }
+
+  .hero {
+    background: var(--white);
+    padding: 64px 40px 48px;
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'EB Garamond', serif;
+    font-size: clamp(34px, 5vw, 52px);
+    font-weight: 500;
+    line-height: 1.15;
+    color: var(--charcoal);
+    margin-bottom: 20px;
+  }
+  .hero h1 em { font-style: italic; color: var(--accent); }
+  .hero .subtitle {
+    font-size: 16px;
+    color: var(--mid);
+    max-width: 480px;
+    margin: 0 auto;
+    font-weight: 300;
+    line-height: 1.8;
+  }
+
+  .main-section {
+    background: var(--section-bg);
+    padding: 60px 40px;
+  }
+  .main-inner {
+    max-width: 780px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 60px;
+    align-items: center;
+  }
+  @media (max-width: 620px) {
+    .main-inner { grid-template-columns: 1fr; gap: 36px; }
+    .mock-side { text-align: center; }
+  }
+
+  .mock-side img.cover {
+    width: 180px;
+    border-radius: 4px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+    display: block;
+  }
+  @media (max-width: 620px) { .mock-side img.cover { margin: 0 auto; } }
+
+  .mock-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--light);
+    font-weight: 400;
+    margin-top: 16px;
+    margin-bottom: 6px;
+  }
+  .mock-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--charcoal);
+    line-height: 1.25;
+  }
+
+  .form-side h2 {
+    font-family: 'EB Garamond', serif;
+    font-size: clamp(24px, 3.5vw, 32px);
+    font-weight: 500;
+    line-height: 1.25;
+    color: var(--charcoal);
+    margin-bottom: 12px;
+  }
+  .form-side h2 em { font-style: italic; color: var(--accent); }
+  .form-side p {
+    font-size: 15px;
+    color: var(--mid);
+    font-weight: 300;
+    line-height: 1.75;
+    margin-bottom: 28px;
+  }
+
+  .form-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .form-wrap input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid var(--border);
+    background: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--charcoal);
+    outline: none;
+    border-radius: 2px;
+    transition: border-color 0.2s;
+  }
+  .form-wrap input::placeholder { color: var(--light); }
+  .form-wrap input:focus { border-color: var(--accent); }
+  .form-wrap button {
+    width: 100%;
+    padding: 16px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background 0.2s;
+  }
+  .form-wrap button:hover { background: #B05E3A; }
+  .form-note {
+    font-size: 12px;
+    color: var(--light);
+    text-align: center;
+    margin-top: 4px;
+  }
+
+  .value-section {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 40px;
+  }
+  .value-section h2 {
+    font-family: 'EB Garamond', serif;
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  .value-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 600px) { .value-grid { grid-template-columns: 1fr; } }
+  .value-item {
+    text-align: center;
+    padding: 28px 20px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+  }
+  .value-icon { font-size: 26px; margin-bottom: 12px; display: block; }
+  .value-item h3 {
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+  }
+  .value-item p { font-size: 13px; color: var(--mid); font-weight: 300; line-height: 1.65; margin: 0; }
+
+  .quote-section {
+    background: var(--section-bg);
+    padding: 52px 40px;
+  }
+  .quote-inner {
+    max-width: 580px;
+    margin: 0 auto;
+    text-align: center;
+    border-left: 3px solid var(--blue);
+    padding-left: 32px;
+    text-align: left;
+  }
+  .quote-inner p {
+    font-family: 'EB Garamond', serif;
+    font-size: clamp(19px, 2.5vw, 24px);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--charcoal);
+    line-height: 1.55;
+    margin-bottom: 12px;
+  }
+  .quote-inner span { font-size: 13px; color: var(--light); font-weight: 300; }
+
+  footer {
+    text-align: center;
+    padding: 36px 40px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--light);
+    font-weight: 300;
+    background: var(--white);
+  }
+
+  @media (max-width: 480px) {
+    nav { padding: 16px 24px; }
+    .hero { padding: 48px 24px 36px; }
+    .main-section { padding: 48px 24px; }
+    .value-section { padding: 48px 24px; }
+    .quote-section { padding: 40px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <img src="logo.png" alt="Inès Richarté" />
+</nav>
+
+<div style="background: var(--white);">
+  <div class="hero">
+    <p class="eyebrow">Bientôt disponible</p>
+    <h1>Le guide qui va enfin t'expliquer pourquoi ta déco ne ressemble jamais à ce que tu <em>imagines.</em></h1>
+    <p class="subtitle">Les règles de déco que personne ne t'a jamais apprises. Couleur, composition, aménagement. Universelles, intemporelles, applicables chez toi, peu importe ton style et ton budget.</p>
+  </div>
+</div>
+
+<div class="blue-strip"></div>
+
+<div class="main-section">
+  <div class="main-inner">
+    <div class="mock-side">
+      <img class="cover" src="guide-cover.jpg" alt="Les Règles de Déco" />
+      <p class="mock-label">Le guide</p>
+      <p class="mock-title">Les Règles de Déco<br>Couleur et aménagement</p>
+    </div>
+
+    <div class="form-side">
+      <h2>Sois parmi les premières à le recevoir <em>au prix de lancement.</em></h2>
+      <p>Le guide sort dans quelques semaines. Inscris-toi pour être prévenue le jour J et profiter du tarif réservé aux premières inscrites.</p>
+
+      <!-- REMPLACE CE BLOC PAR TON FORMULAIRE SYSTEME.IO -->
+      <div class="form-wrap">
+        <input type="text" placeholder="Ton prénom" />
+        <input type="email" placeholder="Ton adresse email" />
+        <button type="button">Je veux être prévenue →</button>
+      </div>
+      <p class="form-note">Pas de spam. Tu peux te désinscrire à tout moment.</p>
+    </div>
+  </div>
+</div>
+
+<div class="value-section">
+  <h2>Ce que le guide t'apprend</h2>
+  <div class="value-grid">
+    <div class="value-item">
+      <span class="value-icon">🎨</span>
+      <h3>Les couleurs</h3>
+      <p>Construire une palette cohérente, choisir sa peinture, gérer les motifs. Fini les achats qui ne s'assemblent pas.</p>
+    </div>
+    <div class="value-item">
+      <span class="value-icon">📐</span>
+      <h3>La composition</h3>
+      <p>Le poids visuel, le point focal, l'équilibre. Tout ce qui fait qu'un intérieur semble vraiment fini.</p>
+    </div>
+    <div class="value-item">
+      <span class="value-icon">🛋️</span>
+      <h3>L'aménagement</h3>
+      <p>Placer tes meubles, gérer les circulations, placer tes rideaux. Les règles que les pros appliquent à chaque projet.</p>
+    </div>
+  </div>
+</div>
+
+<div class="blue-strip"></div>
+
+<div class="quote-section">
+  <div class="quote-inner">
+    <p>"Suivre les tendances c'est être condamnée à se lasser de sa déco tous les deux ans. Ce que tu veux, c'est une déco qui dure et qui te ressemble vraiment."</p>
+    <span>Inès Richarté</span>
+  </div>
+</div>
+
+<footer>
+  © Inès Richarté · contact.inesricharte@gmail.com · @inesricharte
+</footer>
+
+</body>
+</html>
