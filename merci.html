@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merci ! – Inès Richarté</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FAF7F2;
+    --white: #FFFFFF;
+    --charcoal: #1C1C1A;
+    --mid: #4A4A46;
+    --light: #8A8A84;
+    --accent: #C4704A;
+    --blue: #8bafd7;
+    --border: #E0D9CF;
+    --section-bg: #F2EDE6;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav {
+    padding: 18px 40px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    background: var(--white);
+  }
+  nav img { height: 80px; width: auto; }
+
+  .blue-strip { height: 3px; background: var(--blue); opacity: 0.5; }
+
+  .main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 40px;
+    text-align: center;
+  }
+
+  .main-inner { max-width: 560px; }
+
+  .confetti {
+    font-size: 48px;
+    margin-bottom: 24px;
+    display: block;
+  }
+
+  h1 {
+    font-family: 'EB Garamond', serif;
+    font-size: clamp(42px, 7vw, 64px);
+    font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+    line-height: 1.1;
+  }
+
+  h1 em { font-style: italic; color: var(--accent); }
+
+  .subtitle {
+    font-size: 18px;
+    color: var(--mid);
+    font-weight: 300;
+    line-height: 1.75;
+    margin-bottom: 12px;
+  }
+
+  .subtitle strong { color: var(--charcoal); font-weight: 500; }
+
+  .divider {
+    width: 40px;
+    height: 2px;
+    background: var(--blue);
+    margin: 32px auto;
+    opacity: 0.6;
+  }
+
+  .follow-text {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--light);
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+
+  .socials {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: 1px solid var(--border);
+    background: var(--white);
+    color: var(--charcoal);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  .social-btn:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
+  .social-btn svg { width: 16px; height: 16px; }
+
+  footer {
+    text-align: center;
+    padding: 28px 40px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--light);
+    font-weight: 300;
+    background: var(--white);
+  }
+  footer a { color: var(--light); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+
+  @media (max-width: 480px) {
+    .main { padding: 60px 24px; }
+    nav { padding: 16px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <img src="logo.png" alt="Inès Richarté" />
+</nav>
+<div class="blue-strip"></div>
+
+<div class="main">
+  <div class="main-inner">
+    <span class="confetti">🎉</span>
+    <h1>C'est <em>noté !</em></h1>
+    <p class="subtitle">Tu seras parmi les premières prévenues le jour de la sortie du guide.<br><strong>À très vite !</strong></p>
+
+    <div class="divider"></div>
+
+    <p class="follow-text">Me retrouver en attendant</p>
+
+    <div class="socials">
+      <a href="https://www.instagram.com/inesricharte/" target="_blank" class="social-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        Instagram
+      </a>
+      <a href="https://www.youtube.com/@InesRicharte" target="_blank" class="social-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+        YouTube
+      </a>
+      <a href="https://www.tiktok.com/@ines.richarte" target="_blank" class="social-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+        TikTok
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  © Inès Richarté &nbsp;·&nbsp; <a href="mailto:contact.inesricharte@gmail.com">contact.inesricharte@gmail.com</a>
+</footer>
+
+</body>
+</html>
